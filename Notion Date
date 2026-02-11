@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Date Widget</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+      background: white;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="date"></div>
+
+  <script>
+    function updateDate() {
+      const options = { weekday: "long", month: "long", day: "numeric", year: "numeric" };
+      document.getElementById("date").innerText = new Date().toLocaleDateString("en-US", options);
+    }
+    updateDate();
+  </script>
+</body>
+</html>
